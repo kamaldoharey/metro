@@ -2,31 +2,37 @@
 error_reporting(0);
 session_start();
 
-mysql_connect("localhost", "root", "");
+mysql_connect("localhost","root","");
 mysql_select_db("metro");
 
-if ($_POST['login'] == "Submit") {
-	$sel = "select * from admin where uname='" . $_POST['UN'] . "' and upass='" . $_POST['PW'] . "' ";
+if ($_POST['login']=="Submit") 
+{
+	$sel = "select * from admin where uname='".$_POST['UN']."' and upass='".$_POST['PW']."' ";
 	$exe = mysql_query($sel);
 	$tot = mysql_num_rows($exe);
-
-	if ($tot == 1) {
-		$fetch = mysql_fetch_array($exe);
-		$_SESSION["ADMINID"] = $fetch["sno"];
+	
+	if($tot==1)
+	{
+		$fetch=mysql_fetch_array($exe);
+		$_SESSION["ADMINID"]=$fetch["sno"];
 		echo '<script>window.location="home.php" </script>';
 	}
+
 }
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8">
 	<title>Metro Mall</title>
+	<link rel="stylesheet" href="css/bootstrap-grid.css">
+	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="css/bootstrap-reboot.css">
+	<link rel="stylesheet" href="css/bootstrap-reboot.min.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
-
 <body>
 	<div class="container-fluid bg-dark text-white">
 		<h1>
@@ -36,7 +42,7 @@ if ($_POST['login'] == "Submit") {
 	<center>
 		<h1>HOME</h1>
 	</center>
-	<?php echo $sel . $exe ?>
+	<?php echo $sel.$exe ?>
 	<div class="row">
 		<div class="col-md-3"></div>
 		<div class="col-md-6">
@@ -70,5 +76,4 @@ if ($_POST['login'] == "Submit") {
 		</h1>
 	</div>
 </body>
-
 </html>

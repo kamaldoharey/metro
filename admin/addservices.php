@@ -1,5 +1,5 @@
-<?php include 'header.php'; ?>
-<?php include 'sess.php'; ?>
+<?php include'header.php'; ?>
+<?php include'sess.php'; ?>
 <div class="container">
     <div class="row">
         <div class="col-md-3"></div>
@@ -26,11 +26,11 @@
                     </td>
                 </tr>
                 <tr>
-                    <td style="text-align-center;" colspan="2"><input class="btn-primary form-control" type="Submit" name="" id=""></td>
+                    <td style="text-align center;" colspan="2"><input class="btn-primary form-control" type="Submit" name="" id=""></td>
                 </tr>
             </table>
         </div>
         <div class="col-md-3"></div>
     </div>
 </div>
-<?php include 'footer.php'; ?>
+<?php include'footer.php'; ?>

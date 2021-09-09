@@ -1,7 +1,8 @@
-<?php
-$src = "";
-if ($_POST['Find'] != "") {
-	$src = " where name=" . $_POST['st1'];
+<?php 
+$src="";
+if ($_POST['Find']!="")
+{
+	$src=" where name=".$_POST['st1'] ;
 }
 ?>
 <center>

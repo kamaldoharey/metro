@@ -1,14 +1,12 @@
-<?php include 'header.php' ?>
+<?php include'header.php' ?>
 <div class="jumbotron conttt bg-dark text-white	">
-	<center>
-		<h1 class="text-white">Contact Us</h1>
-	</center>
-	<table class="table">
+	<center><h1 class="text-white">Contact Us</h1></center>
+	<table  class="table text-white">
 		<?php
-		$selcon = "select * from contact";
-		$execon = mysql_query($selcon);
-		while ($fetchcon = mysql_fetch_array($execon)) {
-		?>
+		$selcon="select * from contact";
+		$execon=mysql_query($selcon);
+		while ($fetchcon=mysql_fetch_array($execon)) {
+			?>							
 			<tbody>
 				<tr>
 					<th>Name:</th>
@@ -35,34 +33,33 @@
 </div>
 <hr style="height: 3px;">
 <div class="jumbotron bg-dark text-white enqqq">
-	<center>
-		<h1>Enquiry</h1>
-	</center>
-	<table class="table">
+	<center><h1>Enquiry</h1></center>
+	<table class="table text-white">
 		<?php
 		error_reporting(0);
-		if ($_POST['submit'] == "Submit") {
-			$ins = "INSERT INTO enquiry(name, enquiry, phone) VALUES ('" . $_POST['name'] . "','" . $_POST['eq'] . "','" . $_POST['phone'] . "') ";
+		if ($_POST['submit']=="Submit")
+		{
+			$ins = "INSERT INTO enquiry(name, enquiry, phone) VALUES ('".$_POST['name']."','".$_POST['eq']."','".$_POST['phone']."') ";
 			mysql_query($ins);
 		}
 		?>
 		<form method="post">
 			<tr>
 				<td>Name</td>
-				<td><input class="form-control" required placeholder="Name" type="text" name="name"></td>
+				<td><input class="form-control" required placeholder="Name" type="text" name="name" ></td>
 			</tr>
 			<tr>
-				<td>Enquiry </td>
-				<td><input class="form-control" required placeholder="Enquiry" type="text" name="eq"></td>
+				<td>Enquiry	</td>
+				<td><input class="form-control" required placeholder="Enquiry" type="text" name="eq" ></td>
 			</tr>
 			<tr>
 				<td>Phone No.</td>
-				<td><input class="form-control" required placeholder="Phone No." type="number" name="phone"></td>
+				<td><input class="form-control" required placeholder="Phone No." type="number" name="phone" ></td>
 			</tr>
 			<tr>
-				<td colspan="2"> <input type="submit" name="submit" value="Submit" class="form-control btn"> </td>
+				<td colspan="2"> <input  type="submit" name="submit" value="Submit" class="form-control btn" > </td>
 			</tr>
 		</form>
 	</table>
 </div>
-<?php include 'footer.php' ?>
+<?php include'footer.php' ?>

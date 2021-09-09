@@ -1,5 +1,5 @@
-<?php include 'header.php'; ?>
-<?php include 'sess.php'; ?>
+<?php include'header.php'; ?>
+<?php include'sess.php'; ?>
 <center>
     <h1>HOME</h1>
 </center>
@@ -30,4 +30,4 @@
     </div>
     <div class="col-md-3"></div>
 </div>
-<?php include 'footer.php'; ?>
+<?php include'footer.php'; ?>
