@@ -1,6 +1,5 @@
 <?php include 'header.php' ?>
 <div class="row buy-page-div">
-
     <div class="col-md-12">
         <?php
         $selbuuy = "select * from product where sno='" . $_GET['buy1'] . "' ";
