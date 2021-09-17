@@ -1,20 +1,22 @@
-<?php include'header.php' ?>
+<?php include 'header.php' ?>
 <div class="row">
 	<div class="col-md-1"></div>
-	<div class="col-md-10 jumbotron promnm" style="margin: 1em; border-radius: 1em;">
-		<center><h1>Profile</h1></center>
+	<div class="col-md-10 jumbotron profile-page-div" style="margin: 1em; border-radius: 1em;">
+		<center>
+			<h1>Profile</h1>
+		</center>
 		<table class="table ">
-			<?php 
-			$sel = "select * from regis where sno='".$_SESSION["USER_ID"]."' ";
+			<?php
+			$sel = "select * from regis where sno='" . $_SESSION["USER_ID"] . "' ";
 			$exe = mysql_query($sel);
-			$fetch_p = mysql_fetch_array($exe); 
+			$fetch_p = mysql_fetch_array($exe);
 			?>
 			<tr>
 				<center><img class="img-thumbnail" src="images/user/<?php echo $fetch_p['photo'] ?>" alt="Error" width="200" height="200"></center>
 			</tr>
 			<tr>
 				<td>Name</td>
-				<td ><?php echo $fetch_p['name']; ?></td>
+				<td><?php echo $fetch_p['name']; ?></td>
 			</tr>
 			<tr>
 				<td>Gender</td>
@@ -48,4 +50,4 @@
 	</div>
 	<div class="col-md-1"></div>
 </div>
-<?php include'footer.php' ?>
+<?php include 'footer.php' ?>
