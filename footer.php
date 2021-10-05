@@ -2,13 +2,13 @@
 
 </div>
 </div>
-<footer class="container-fluid bg-success">
+<footer class="container-fluid custom-bg-1 ">
 	<ul class="container navbar list-unstyled">
-		<li><a class="navbar-brand text-dark" href="index.php">Home</a></li>
-		<li><a class="navbar-brand text-dark" href="about.php">About Us</a></li>
-		<li><a class="navbar-brand text-dark" href="product.php">Products</a></li>
-		<li><a class="navbar-brand text-dark" href="service.php">Services</a></li>
-		<li><a class="navbar-brand text-dark" href="contact.php">Contact Us</a></li>
+		<li><a class="navbar-brand text-white" href="index.php">Home</a></li>
+		<li><a class="navbar-brand text-white" href="about.php">About Us</a></li>
+		<li><a class="navbar-brand text-white" href="product.php">Products</a></li>
+		<li><a class="navbar-brand text-white" href="service.php">Services</a></li>
+		<li><a class="navbar-brand text-white" href="contact.php">Contact Us</a></li>
 	</ul>
 </footer>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

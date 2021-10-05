@@ -1,125 +1,15 @@
-*{
-	padding: 0;
-	margin: 0;
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif !important;
 }
 
-.head
-{
-	font-size: 72px;
-	color: white;
-	background-color: green;
-	text-align: center;
+body {
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  min-height: 100vh;
+  background-color: #d4b499;
 }
 
-.navi{
-	width:90%;
-	margin: auto;
-	background-color: green;
+footer {
+  margin-top: auto !important;
 }
-
-.navi a{
-	color: white;
-	border: 1px solid purple;
-	text-decoration: none;
-	border-radius: 9px;
-	background-color: purple;
-}
-
-.foot{
-	font-size: 32px;
-	margin: auto;
-	background-color: green;
-	text-align: center;
-	color: white;
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-}
-
-body h1{
-	color: green;
-}
-
-.welcome{
-	border: 1px solid lightgreen;
-	border-radius: 15px;
-	width: 600px;
-	margin: auto;
-	background-color: lightgreen;
-	height: 200px;
-	padding-top: 100px;
-}
-
-
-.addoffer{
-	border: 1px solid lightgreen;
-	border-radius: 15px;
-	width: 600px;
-	margin: auto;
-	background-color: lightgreen;
-	height: 200px;
-	padding-top: 100px;
-}
-
-.addoffer table{
-	margin: auto;
-}
-
-.addpro{
-	border: 1px solid lightgreen;
-	border-radius: 15px;
-	width: 400px;
-	margin: auto;
-	background-color: lightgreen;
-	padding: 50px;
-}
-
-.addcat{
-	border: 1px solid lightgreen;
-	border-radius: 15px;
-	width: 400px;
-	margin: auto;
-	background-color: lightgreen;
-	padding: 50px;
-}
-
-.addsub{
-	border: 1px solid lightgreen;
-	border-radius: 15px;
-	width: 400px;
-	margin: auto;
-	background-color: lightgreen;
-	padding: 50px;
-}
-
-.addcontact{
-	border: 1px solid lightgreen;
-	border-radius: 15px;
-	width: 400px;
-	margin: auto;
-	background-color: lightgreen;
-	padding: 50px;
-}
-
-.addsrv{
-	border: 1px solid lightgreen;
-	border-radius: 15px;
-	width: 400px;
-	margin: auto;
-	background-color: lightgreen;
-	padding: 50px;
-}
-
-.anc{
-	width: 120px;
-}
-
-.view table{
-	margin: auto;
-	border: 1px solid;
-}
-
-.view table td{
-	border: 1px solid;
-}
-

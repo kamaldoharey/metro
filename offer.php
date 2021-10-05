@@ -2,7 +2,7 @@
 <div class="col-md-12 offer-page-div">
 	<div class="">
 		<div class="offeroop">
-			<h1 class="bg-success text-white">Offer</h1>
+			<h1 class="custom-bg-1 text-white">Offer</h1>
 		</div>
 		<?php
 		$select_offer =  "SELECT * FROM offer WHERE sno='" . $_GET['offid'] . "' ";

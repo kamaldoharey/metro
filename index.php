@@ -29,7 +29,7 @@
     <!-- image -->
 
     <article class="index-offer-div">
-        <div id="index-offer-label" class="bg-success">
+        <div id="index-offer-label" class="custom-bg-1">
             <center> <b class="text-white">Offer</b> </center>
         </div>
         <marquee>
@@ -42,7 +42,7 @@
                     <?php echo $fetch['name']; ?> | </a>
             <?php } ?>
         </marquee>
-        <h4 class="text-success ">Welcome To Metro Mall</h4>
+        <h4 class="text-dark ">Welcome To Metro Mall</h4>
         <p>Metro Mall is a shopping mall in Jaipur. It is the Rajasthan's largest shopping mall based on total area and fourth largest by gross leasable area. Located in Jaipur, it includes 1,200 shops. Access to the mall is provided via M.I. Road, rebuilt as a double-decker road in April 2015. Twice delayed, Metro Mall opened on 8 May 2015, with about 355 retailers, marking the Rajasthan's largest-ever mall opening in retail history. However it is not the largest in gross leasable space.</p>
         <b id=uuu3 onclick="uuu1()" style="position: absolute; right: 3em;">Read More</b>
         <div id="uuu2" style="display: none;">

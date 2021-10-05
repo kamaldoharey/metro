@@ -2,6 +2,18 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif !important;
 }
 
+body {
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  min-height: 100vh;
+  background-color: #d4b499;
+}
+
+footer {
+  margin-top: auto !important;
+}
+
 /* -------------------------------------------------------------------------- */
 /*                                   header                                   */
 /* -------------------------------------------------------------------------- */
@@ -88,6 +100,7 @@
   top: 0px;
   border-radius: 16px;
   background: radial-gradient(#fff, #ff6);
+
   text-align: justify;
   padding: 1.7em 1em 1em 1em;
 }
@@ -316,4 +329,12 @@ header > div > ul > li:nth-child(1) {
   grid-template-columns: auto auto;
   grid-gap: 15px;
   align-items: center;
+}
+
+.custom-bg-1 {
+  background-color: #212121;
+}
+
+.contact-bg {
+  background-color: #264653;
 }

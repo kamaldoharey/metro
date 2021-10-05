@@ -1,40 +1,40 @@
 <?php include 'header.php' ?>
-<div class="jumbotron bg-dark text-white	">
+<div class="jumbotron contact-bg text-white	">
 	<center>
 		<h1 class="text-white">Contact Us</h1>
 	</center>
 	<table class="table text-white">
 		<?php
-		$selcon = "select * from contact";
-		$execon = mysql_query($selcon);
-		while ($fetchcon = mysql_fetch_array($execon)) {
+		$select_contact = "select * from contact";
+		$execute_contact_query = mysql_query($select_contact);
+		while ($fetch_contact = mysql_fetch_array($execute_contact_query)) {
 		?>
 			<tbody>
 				<tr>
 					<th>Name:</th>
-					<td><?php echo $fetchcon['name'] ?></td>
+					<td><?php echo $fetch_contact['name'] ?></td>
 					<td rowspan="4">
-						<img class="img-thumbnail" src="images/contact/<?php echo $fetchcon['image'] ?>" alt="Image Not FOund" width="400" height="300">
+						<img class="img-thumbnail" src="images/contact/<?php echo $fetch_contact['image'] ?>" alt="Image Not FOund" width="400" height="300">
 					</td>
 				</tr>
 				<tr>
 					<th>Contact:</th>
-					<td><?php echo $fetchcon['pno'] ?></td>
+					<td><?php echo $fetch_contact['pno'] ?></td>
 				</tr>
 				<tr>
 					<th>E-Mail:</th>
-					<td><?php echo $fetchcon['eid'] ?></td>
+					<td> <span> <i class="far fa-envelope"></i> </span> <?php echo $fetch_contact['eid'] ?></td>
 				</tr>
 				<tr>
 					<th>Address:</th>
-					<td><?php echo $fetchcon['address'] ?></td>
+					<td><?php echo $fetch_contact['address'] ?></td>
 				</tr>
 			</tbody>
 		<?php } ?>
 	</table>
 </div>
-<hr style="height: 3px;">
-<div class="jumbotron bg-dark text-white enquiry-page-div">
+<hr style="height: 5px;">
+<div class="jumbotron form-group contact-bg text-white enquiry-page-div">
 	<center>
 		<h1>Enquiry</h1>
 	</center>

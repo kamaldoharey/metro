@@ -13,15 +13,20 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <title>Metro Mall</title>
+    <!-- /* -------------------------------- bootstrap ------------------------------- */ -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- /* ------------------------------- fontawesome ------------------------------ */ -->
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <script src="fontawesome/js/all.js"></script>
+    <!-- /* -------------------------------------------------------------------------- */ -->
     <link rel="stylesheet" href="css/style.css">
     <script src="js/on1.js"></script>
 </head>
 
 <body>
     <!-- /* --------------------------- header starts here --------------------------- */ -->
-    <header class="container-fluid bg-success" id="header">
-        <div class="container bg-success">
+    <header class="container-fluid custom-bg-1" id="header">
+        <div class="container custom-bg-1">
             <ul class="row">
                 <li class="col-md-3 list-unstyled">
                     <h1>Metro Mall</h1>
@@ -53,7 +58,7 @@ session_start();
         <div class="row">
             <aside class="col-md-3">
                 <div class="home-page-user-login">
-                    <h3 class="text-white bg-success header-login-div-title"> User login </h3>
+                    <h3 class="text-white custom-bg-1 header-login-div-title"> User login </h3>
                     <table class="table">
                         <?php
                         /* If login detail are found */
@@ -76,13 +81,13 @@ session_start();
                                     <input class="form-control" required name="UP" placeholder="Password" type="password">
                                 </tr>
                                 <tr>
-                                    <td style="font-size: 0.5em !important; ">
-                                        <!-- TODO UI FIx
-                                        -->
-                                        <!-- btn = registration -->
-                                        <a class="float-left btn form-control btn-dark" href="reg.php"> Registration </a>
-                                        <!-- btn = Login -->
-                                        <input class="float-left btn form-control btn-dark" type="submit" name="login" value="Login">
+                                    <td style="font-size: 0.5em !important;" colspan="1">
+                                        <center>
+                                            <a class="btn form-control btn-dark" href="reg.php"> Sign Up </a>
+                                        </center>
+                                        <center>
+                                            <input class="btn form-control btn-dark" type="submit" name="login" value="Log in">
+                                        </center>
                                     </td>
                                 </tr>
                             </form>
@@ -103,11 +108,11 @@ session_start();
                     <?php
                     // TODO : LATEST PRODUCTS ARE NOT SHOWING
                     ?>
-                    <h3 class="bg-success text-white">Latest Products</h3>
+                    <h3 class="custom-bg-1 text-white">Latest Products</h3>
                     <div class="latest-product-div-items">
                         <?php
-
-                        $select_latest_products = "select * from ";
+                        $select_latest_products = "select * from product ORDER BY DESC";
+                        $execute_query = mysql_query($select_latest_products);
 
                         ?>
                     </div>
