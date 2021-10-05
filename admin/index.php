@@ -2,37 +2,31 @@
 error_reporting(0);
 session_start();
 
-mysql_connect("localhost","root","");
+mysql_connect("localhost", "root", "");
 mysql_select_db("metro");
 
-if ($_POST['login']=="Submit") 
-{
-	$sel = "select * from admin where uname='".$_POST['UN']."' and upass='".$_POST['PW']."' ";
+if ($_POST['login'] == "Submit") {
+	$sel = "select * from admin where uname='" . $_POST['UN'] . "' and upass='" . $_POST['PW'] . "' ";
 	$exe = mysql_query($sel);
 	$tot = mysql_num_rows($exe);
-	
-	if($tot==1)
-	{
-		$fetch=mysql_fetch_array($exe);
-		$_SESSION["ADMINID"]=$fetch["sno"];
+
+	if ($tot == 1) {
+		$fetch = mysql_fetch_array($exe);
+		$_SESSION["ADMINID"] = $fetch["sno"];
 		echo '<script>window.location="home.php" </script>';
 	}
-
 }
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Metro Mall</title>
-	<link rel="stylesheet" href="css/bootstrap-grid.css">
-	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
-	<link rel="stylesheet" href="css/bootstrap-reboot.css">
-	<link rel="stylesheet" href="css/bootstrap-reboot.min.css">
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
+
 <body>
 	<div class="container-fluid bg-dark text-white">
 		<h1>
@@ -42,7 +36,7 @@ if ($_POST['login']=="Submit")
 	<center>
 		<h1>HOME</h1>
 	</center>
-	<?php echo $sel.$exe ?>
+	<?php echo $sel . $exe ?>
 	<div class="row">
 		<div class="col-md-3"></div>
 		<div class="col-md-6">
@@ -75,5 +69,7 @@ if ($_POST['login']=="Submit")
 			<center>www.metromall.com</center>
 		</h1>
 	</div>
-</body>
-</html>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script s </body>
+		< /html>

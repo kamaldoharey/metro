@@ -8,14 +8,14 @@
 			<td>Delete</td>
 		</tr>
 		<?php
-		$seloder = "SELECT * FROM oder";
-		$exeoder = mysql_query($seloder);
-		while ($fetchoder = mysql_fetch_array($exeoder)) {
+		$select_order = "SELECT * FROM oder";
+		$execute_order = mysql_query($select_order);
+		while ($fetch_order = mysql_fetch_array($execute_order)) {
 		?>
 			<tr>
-				<td> <?php echo $fetchoder['name']; ?> </td>
-				<td> <?php echo $fetchoder['price']; ?> </td>
-				<td> <?php echo $fetchoder['date']; ?> </td>
+				<td> <?php echo $fetch_order['name']; ?> </td>
+				<td> <?php echo $fetch_order['price']; ?> </td>
+				<td> <?php echo $fetch_order['date']; ?> </td>
 				<td> <a class="form-control btn-danger" href="">Delete</a> </td>
 			</tr>
 		<?php } ?>

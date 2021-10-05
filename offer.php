@@ -5,15 +5,15 @@
 			<h1 class="bg-success text-white">Offer</h1>
 		</div>
 		<?php
-		$seloop =  "SELECT * FROM offer WHERE sno='" . $_GET['offid'] . "' ";
-		$exeoop = mysql_query($seloop);
-		$fetchoop = mysql_fetch_array($exeoop);
+		$select_offer =  "SELECT * FROM offer WHERE sno='" . $_GET['offid'] . "' ";
+		$execute_offer = mysql_query($select_offer);
+		$fetch_offer = mysql_fetch_array($execute_offer);
 		?>
-		<div> <b> <?php echo $fetchoop['name']; ?> </b> </div>
+		<div> <b> <?php echo $fetch_offer['name']; ?> </b> </div>
 
-		<img class="img-thumbnail" src="images/offer/<?php echo $fetchoop['image']; ?>" alt="">
+		<img class="img-thumbnail" src="images/offer/<?php echo $fetch_offer['image']; ?>" alt="">
 		<br>
-		<?php echo $fetchoop['offerdec']; ?>
+		<?php echo $fetch_offer['offerdec']; ?>
 	</div>
 
 </div>

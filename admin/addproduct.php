@@ -2,6 +2,7 @@
 <?php include 'sess.php'; ?>
 
 <?php
+// BUG Update product is not working
 
 //file upload
 $name1 = $_FILES['im1']['name'];
@@ -76,10 +77,16 @@ if ($_POST['submit'] == "Submit") {
                 <h1>Add Product</h1>
             </center>
             <table class="table">
+                <?php
+                /* Fetching the information of the product */
+                $sel_product = "select * from product where sno='" . $_GET['did'] . "'";
+                $exe_product = mysql_query($sel_product);
+                $fetch_product = mysql_fetch_array($exe_product);
+                ?>
                 <form method="post" enctype="multipart/form-data">
                     <tr>
                         <td>Product Name </td>
-                        <td><input class="form-control" type="text" name="name" placeholder="Product Name"></td>
+                        <td><input class="form-control" type="text" name="name" placeholder="Product Name" value="<?php echo $fetch_product['name'] ?>"></td>
                     </tr>
                     <tr>
                         <td>category </td>
@@ -90,7 +97,11 @@ if ($_POST['submit'] == "Submit") {
                                 $q = mysql_query($sel);
                                 while ($fetch = mysql_fetch_array($q)) {
                                 ?>
-                                    <option value="<?php echo $fetch['name']; ?>"><?php echo $fetch['name']; ?></option>
+                                    <option <?php
+                                            if ($fetch['name'] == $fetch_product['cat']) {
+                                                echo "selected";
+                                            }
+                                            ?> value="<?php echo $fetch['name']; ?>"> <?php echo $fetch['name']; ?></option>
                                 <?php } ?>
                             </select>
                         </td>
@@ -104,65 +115,129 @@ if ($_POST['submit'] == "Submit") {
                                 $q = mysql_query($sel);
                                 while ($fetch = mysql_fetch_array($q)) {
                                 ?>
-                                    <option value="<?php echo $fetch['name']; ?>"><?php echo $fetch['name']; ?></option>
+                                    <option <?php
+                                            if ($fetch['name'] == $fetch_product['subcat']) {
+                                                echo "selected";
+                                            }
+                                            ?> value="<?php echo $fetch['name']; ?>"><?php echo $fetch['name']; ?></option>
                                 <?php } ?>
                             </select>
                         </td>
                     </tr>
                     <tr>
                         <td>Product Code </td>
-                        <td><input class="form-control" type="text" name="code" placeholder="Product Code"></td>
+                        <td><input class="form-control" type="text" name="code" placeholder="Product Code" value="<?php echo $fetch_product['procode'] ?>"></td>
                     </tr>
                     <tr>
                         <td>For</td>
                         <td>
                             <select class="form-control" name="for1">
-                                <option value="All">All</option>
-                                <option value="Man">Man</option>
-                                <option value="Woman">Woman</option>
-                                <option value="Kids">Kids</option>
+                                <option <?php
+                                        if ("all" == $fetch_product['fo']) {
+                                            echo "selected";
+                                        }
+                                        ?> value="All">All</option>
+                                <option <?php
+                                        if ("Man" == $fetch_product['fo']) {
+                                            echo "selected";
+                                        }
+                                        ?> value="Man">Man</option>
+                                <option <?php
+                                        if ("Woman" == $fetch_product['fo']) {
+                                            echo "selected";
+                                        }
+                                        ?> value="Woman">Woman</option>
+                                <option <?php
+                                        if ("Kids" == $fetch_product['fo']) {
+                                            echo "selected";
+                                        }
+                                        ?> value="Kids">Kids</option>
                             </select>
                         </td>
                     </tr>
                     <tr>
                         <td>Mrp Price </td>
-                        <td><input class="form-control" type="text" name="mrp" placeholder="MRP Price"></td>
+                        <td><input class="form-control" type="text" name="mrp" placeholder="MRP Price" value="<?php echo $fetch_product['mrp'] ?>"></td>
                     </tr>
                     <tr>
                         <td>Discounted Price </td>
-                        <td><input class="form-control" type="text" name="dmrp" placeholder="Discounted Price "></td>
+                        <td><input class="form-control" type="text" name="dmrp" placeholder="Discounted Price" value="<?php echo $fetch_product['dismrp'] ?>"></td>
                     </tr>
                     <tr>
                         <td>Image 1</td>
-                        <td><input class="form-control" type="file" name="im1"></td>
+                        <td>
+                            <?php
+                            if ($_GET['did'] != "") {
+                            ?>
+                                <img class="img-thumbnail" src="../images/product/<?php echo $fetch_product['i1'] ?>" src="" alt="">
+                            <?php } ?>
+                            <input class="form-control" type="file" name="im1">
+                        </td>
                     </tr>
                     <tr>
                         <td>Image 2</td>
-                        <td><input class="form-control" type="file" name="im2"></td>
+                        <td> <?php
+                                if ($_GET['did'] != "") {
+                                ?>
+                                <img class=" img-thumbnail" src="../images/product/<?php echo $fetch_product['i2'] ?>" src="" alt="">
+                            <?php } ?>
+                            <input class="form-control" type="file" name="im2">
+                        </td>
                     </tr>
                     <tr>
                         <td>Image 3</td>
-                        <td><input class="form-control" type="file" name="im3"></td>
+                        <td><?php
+                            if ($_GET['did'] != "") {
+                            ?>
+                                <img class=" img-thumbnail" src="../images/product/<?php echo $fetch_product['i3'] ?>" src="" alt="">
+                            <?php } ?>
+                            <input class="form-control" type="file" name="im3">
+                        </td>
                     </tr>
                     <tr>
                         <td>Image 4</td>
-                        <td><input class="form-control" type="file" name="im4"></td>
+                        <td>
+                            <?php
+                            if ($_GET['did'] != "") {
+                            ?>
+                                <img class=" img-thumbnail" src="../images/product/<?php echo $fetch_product['i4'] ?>" src="" alt="">
+                            <?php } ?>
+                            <input class="form-control" type="file" name="im4">
+                        </td>
                     </tr>
                     <tr>
                         <td>About Product</td>
-                        <td><input class="form-control" type="text" name="about" placeholder="About Product"></td>
+                        <td><input class=" form-control" type="text" name="about" placeholder="About Product" value="<?php echo $fetch_product['about'] ?>">
+                        </td>
                     </tr>
                     <tr>
                         <td>Status</td>
                         <td>
-                            Enable <input type="radio" name="status" value="1">
-                            Disable <input type="radio" name="status" value="0">
+                            Enable <input <?php
+                                            if ($fetch_product['status'] == 1) {
+                                                echo 'checked="checked"';
+                                            }
+                                            ?> type="radio" name="status">
+                            Disable <input <?php
+                                            if ($fetch_product['status'] == 0) {
+                                                echo 'checked="checked"';
+                                            }
+                                            ?> name="status" value="" type="radio" name="status">
                         </td>
                     </tr>
                     <tr>
                         <td>Latest </td>
                         <td>
-                            Enable <input type="radio" name="latest" value="1"> Disable <input type="radio" name="latest" value="0">
+                            Enable <input <?php
+                                            if ($fetch_product['lat'] == 1) {
+                                                echo 'checked="checked"';
+                                            }
+                                            ?> type="radio" name="latest" value="1">
+                            Disable <input <?php
+                                            if ($fetch_product['lat'] == 0) {
+                                                echo 'checked="checked"';
+                                            }
+                                            ?> type="radio" name="latest" value="0">
                         </td>
                     </tr>
                     <tr>

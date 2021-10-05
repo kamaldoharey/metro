@@ -53,7 +53,7 @@
 					</tr>
 					<tr>
 						<?php if ($_GET['did'] != "") { ?>
-							<img class="img-thumbnail" src="imageupload/cat/<?php echo $fetch['image'] ?> " alt="">
+							<img class="img-thumbnail" src="../images/cat/<?php echo $fetch['image'] ?> " alt="">
 						<?php } ?>
 					</tr>
 					<tr>

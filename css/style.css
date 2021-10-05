@@ -18,6 +18,27 @@
   color: white;
 }
 
+#header-right-side > ul > li:nth-child(3):hover #drop-down-menu {
+  position: absolute;
+  display: block;
+  border: 1px solid green;
+  border-radius: 1em;
+  background-color: lightgreen;
+  top: 3em;
+  z-index: 1;
+  width: 5em;
+  text-align: center;
+  opacity: 0.9;
+}
+
+#header-right-side > ul > li:nth-child(3):hover #drop-down-menu a {
+  padding: 5px;
+}
+
+.header-login-div-title {
+  padding-left: 15px;
+}
+
 #latest-product {
   background-color: #e9e9e9;
   border-radius: 15px;
@@ -79,6 +100,7 @@
   padding-top: 5px;
   border-radius: 15px 15px 0px 0px;
 }
+
 /* ---------------------------- About us page end --------------------------- */
 
 header > div > ul > li:nth-child(1) {
@@ -134,7 +156,11 @@ header > div > ul > li:nth-child(1) {
 
 /* --------------------------- offer page end here -------------------------- */
 
-.prodpage {
+/* -------------------------------------------------------------------------- */
+/*                             common in many page                            */
+/* -------------------------------------------------------------------------- */
+
+.show-on-the-go {
   background: radial-gradient(#fff, #ff6);
   padding: 1em;
   margin: 1em;
@@ -142,14 +168,16 @@ header > div > ul > li:nth-child(1) {
   position: relative;
 }
 
-.prodpage a {
+.show-on-the-go a {
   margin: 5px;
 }
 
-.prodpage #mht {
+.show-on-the-go #mht {
   position: absolute;
   top: 0cml;
 }
+/* ------------------------- End common in many page ------------------------ */
+/* common in many page   */
 
 .ho56 {
   display: grid;
@@ -164,7 +192,6 @@ header > div > ul > li:nth-child(1) {
 }
 
 .ho5:hover {
-  -webkit-transform: scale(1.15);
   transform: scale(1.15);
   border: 2px black;
 }
@@ -183,23 +210,6 @@ header > div > ul > li:nth-child(1) {
 #drop-down-menu {
   position: relative;
   display: none;
-}
-
-#header-right-side > ul > li:nth-child(3):hover #drop-down-menu {
-  position: absolute;
-  display: block;
-  border: 1px solid green;
-  border-radius: 1em;
-  background-color: lightgreen;
-  top: 3em;
-  z-index: 1;
-  width: 5em;
-  text-align: center;
-  opacity: 0.9;
-}
-
-#header-right-side > ul > li:nth-child(3):hover #drop-down-menu a {
-  padding: 5px;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -233,10 +243,11 @@ header > div > ul > li:nth-child(1) {
 /* -------------------------------------------------------------------------- */
 .registration-page-div {
   margin: 1em;
-  background-color: #1867ad !important;
+  background-color: #127943 !important;
   color: white;
   border-radius: 1em !important;
 }
+
 /* --------------------- Registration Page div end here --------------------- */
 
 #pbg {
@@ -254,6 +265,7 @@ header > div > ul > li:nth-child(1) {
   background: radial-gradient(#fff, #ff6);
   border-radius: 1em;
 }
+/* ---------------------------- End buy page div ---------------------------- */
 
 /* -------------------------------------------------------------------------- */
 /*                              profile page div                              */
@@ -261,11 +273,15 @@ header > div > ul > li:nth-child(1) {
 .profile-page-div {
   background: radial-gradient(#fff, #ff6) !important;
 }
+
+/* -------------------------- End profile page div -------------------------- */
+
 /* -------------------------------------------------------------------------- */
-@media only screen and (max-width: 1050px) {
+@media only screen and (max-width: 1050em) {
   #eater {
     height: 1.5em;
   }
+
   #eater2 {
     width: 500px;
   }
@@ -275,13 +291,29 @@ header > div > ul > li:nth-child(1) {
     grid-column-end: -1;
     /*grid-template-columns: 1fr 1fr 1fr ;*/
   }
+
   .ho56 {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto auto;
     grid-auto-flow: dense;
   }
 }
 
 .about-us-page-content > h4:nth-child(1) {
   padding-top: 25px;
+}
+
+/* .index-login-btn,
+.index-registration-btn {
+  outline: 1px black solid;
+} */
+
+/* ----------------------------- latest product ----------------------------- */
+
+.latest-product-div-items {
+  margin: 10px;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 15px;
+  align-items: center;
 }

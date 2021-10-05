@@ -1,5 +1,5 @@
 <?php include 'header.php' ?>
-<div class="row prodpage">
+<div class="row show-on-the-go">
 	<div class="col-md-9">
 		<h1>Service</h1>
 		<?php

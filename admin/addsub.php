@@ -51,7 +51,7 @@ $fetch_sub_cat = mysql_fetch_array($exe_sub_cat);
                     <tr>
                         <?php if ($_GET['did'] != "") {
                         ?>
-                            <img class="img-thumbnail" src="imageupload/sub cat/<?php echo $fetch_sub_cat['imag e']; ?>" alt="">
+                            <img class="img-thumbnail" src="../images/sub cat/<?php echo $fetch_sub_cat['image']; ?>" alt="">
                         <?php }  ?>
                     </tr>
                     <tr>

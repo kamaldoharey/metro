@@ -38,8 +38,7 @@ if ($_POST['submit'] == "Submit") {
 }
 ?>
 <div class="row">
-	<div class="col-md-2"></div>
-	<div class="col-md-8 jumbotron registration-page-div">
+	<div class="col-md-12 jumbotron registration-page-div">
 		<center>
 			<h1>Registration</h1>
 		</center>
@@ -66,7 +65,42 @@ if ($_POST['submit'] == "Submit") {
 				</tr>
 				<tr>
 					<td>State</td>
-					<td><input required type="text" name="state"></td>
+					<!-- 
+						TODO  state list are not in drop down 
+					 -->
+					<!-- <td><input required type="text" name="state"></td> -->
+					<td>
+						<select class="form-control" name="" id="">
+							<option value="Andhra Pradesh"> Andhra Pradesh </option>
+							<option value="Arunachal Pradesh"> Arunachal Pradesh </option>
+							<option value="Assam"> Assam </option>
+							<option value="Bihar"> Bihar </option>
+							<option value="Chhattisgarh"> Chhattisgarh </option>
+							<option value="Goa"> Goa </option>
+							<option value="Gujarat"> Gujarat </option>
+							<option value="Haryana"> Haryana </option>
+							<option value="Himachal Pradesh"> Himachal Pradesh </option>
+							<option value="Jharkhand"> Jharkhand </option>
+							<option value="Karnataka"> Karnataka </option>
+							<option value="Kerala"> Kerala </option>
+							<option value="Madhya Pradesh"> Madhya Pradesh </option>
+							<option value="Maharashtra"> Maharashtra </option>
+							<option value="Manipur"> Manipur </option>
+							<option value="Meghalaya"> Meghalaya </option>
+							<option value="Mizoram"> Mizoram </option>
+							<option value="Nagaland"> Nagaland </option>
+							<option value="Odisha"> Odisha </option>
+							<option value="Punjab"> Punjab </option>
+							<option value="Rajasthan"> Rajasthan </option>
+							<option value="Sikkim"> Sikkim </option>
+							<option value="Tamil Nadu"> Tamil Nadu </option>
+							<option value="Telangana"> Telangana </option>
+							<option value="Tripura"> Tripura </option>
+							<option value="Uttar Pradesh"> Uttar Pradesh </option>
+							<option value="Uttarakhand"> Uttarakhand </option>
+							<option value="West Bengal"> West Bengal </option>
+						</select>
+					</td>
 				</tr>
 				<tr>
 					<td>Qualification</td>
@@ -78,7 +112,7 @@ if ($_POST['submit'] == "Submit") {
 				</tr>
 				<tr>
 					<td>Phone No.</td>
-					<td><input required placeholder="Phone no" type="number" required class="form-control" name="phone"></td>
+					<td><input required placeholder="Phone no" type="number" maxlength="10" required class="form-control" name="phone" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"></td>
 				</tr>
 				<tr>
 					<td>Email ID</td>
@@ -100,6 +134,5 @@ if ($_POST['submit'] == "Submit") {
 			</form>
 		</table>
 	</div>
-	<div class="col-md-2"></div>
 </div>
 <?php include 'footer.php'; ?>

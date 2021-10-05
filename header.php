@@ -19,6 +19,7 @@ session_start();
 </head>
 
 <body>
+    <!-- /* --------------------------- header starts here --------------------------- */ -->
     <header class="container-fluid bg-success" id="header">
         <div class="container bg-success">
             <ul class="row">
@@ -26,6 +27,7 @@ session_start();
                     <h1>Metro Mall</h1>
                     <td colspan="2">
                 </li>
+                <!-- /* ----------------------------- navigation bar ----------------------------- */ -->
                 <li class="col-md-9 list-unstyled" id="header-right-side">
                     <Ul class="navbar list-unstyled navigation-colum">
                         <li><a class="navbar-brand text-dark" href="index.php">Home</a></li>
@@ -41,17 +43,20 @@ session_start();
                         <li><a class="navbar-brand text-dark" href="contact.php">Contact Us</a></li>
                     </Ul>
                 </li>
+                <!-- /* ------------------------- navigation bar end here ------------------------ */ -->
             </ul>
         </div>
     </header>
+    <!-- /* ---------------------------- header ends here ---------------------------- */ -->
     <div id="eater"></div>
     <div class="container">
         <div class="row">
             <aside class="col-md-3">
                 <div class="home-page-user-login">
+                    <h3 class="text-white bg-success header-login-div-title"> User login </h3>
                     <table class="table">
-                        <h3 class="text-white bg-success"> <b>&nbsp User Login</b> </h3>
                         <?php
+                        /* If login detail are found */
                         if ($_POST['login'] == "Login") {
                             $sel = "select * from regis where name='" . $_POST['UN'] . "' AND password='" . $_POST['UP'] . "' ";
                             $exe = mysql_query($sel);
@@ -71,34 +76,42 @@ session_start();
                                     <input class="form-control" required name="UP" placeholder="Password" type="password">
                                 </tr>
                                 <tr>
-                                    <td><a class="form-control btn-primary" href="reg.php">Registrantion</a>
-                                        <input class="form-control btn-primary" type="submit" name="login" value="Login">
+                                    <td style="font-size: 0.5em !important; ">
+                                        <!-- TODO UI FIx
+                                        -->
+                                        <!-- btn = registration -->
+                                        <a class="float-left btn form-control btn-dark" href="reg.php"> Registration </a>
+                                        <!-- btn = Login -->
+                                        <input class="float-left btn form-control btn-dark" type="submit" name="login" value="Login">
                                     </td>
                                 </tr>
                             </form>
                         <?php } else {
+                            /* If log-in detail are not found */
                         ?>
                             <table>
-                                <tr><a style="margin-top: 5px; " class="form-control btn-primary" href="profile.php">My Profile</a></tr>
-                                <tr><a style="margin-top: 5px; " class="form-control btn-primary" href="order.php">My Order</a></tr>
-                                <tr><a style="margin-top: 5px; " class="form-control btn-primary" href="">Change Password</a></tr>
-                                <tr><a style="margin-top: 5px; " class="form-control btn-primary" href="logout.php">Log Out</a></tr>
+                                <tr> <a style="margin-top: 5px;" class="form-control btn-primary" href="profile.php">My Profile</a> </tr>
+                                <tr> <a style="margin-top: 5px;" class="form-control btn-primary" href="order.php">My Order</a> </tr>
+                                <tr> <a style="margin-top: 5px;" class="form-control btn-primary" href="">Change Password</a> </tr>
+                                <tr> <a style="margin-top: 5px;" class="form-control btn-primary" href="logout.php">Log Out</a> </tr>
                             </table>
                         <?php } ?>
                     </table>
                 </div>
+                <!-- /* ------------------------ latest-product-div-items ------------------------ */ -->
                 <div id="latest-product">
+                    <?php
+                    // TODO : LATEST PRODUCTS ARE NOT SHOWING
+                    ?>
                     <h3 class="bg-success text-white">Latest Products</h3>
-                    <div class="row1">
-                        <center>
-                            <img src="images/download.jpg" width="80" height="80" alt="error">
-                            <img src="images/download.jpg" width="80" height="80" alt="error">
-                        </center>
-                        <center>
-                            <img src="images/download.jpg" width="80" height="80" alt="error">
-                            <img src="images/download.jpg" width="80" height="80" alt="error">
-                        </center>
+                    <div class="latest-product-div-items">
+                        <?php
+
+                        $select_latest_products = "select * from ";
+
+                        ?>
                     </div>
                 </div>
+                <!-- /* ------------------------ latest product ends here ------------------------ */ -->
             </aside>
             <div class="col-md-9">
