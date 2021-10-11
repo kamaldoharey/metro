@@ -62,7 +62,7 @@ session_start();
                     <table class="table">
                         <?php
                         /* If login detail are found */
-                        if ($_POST['login'] == "Login") {
+                        if ($_POST['login'] == "Log in") {
                             $sel = "select * from regis where name='" . $_POST['UN'] . "' AND password='" . $_POST['UP'] . "' ";
                             $exe = mysql_query($sel);
                             $tot = mysql_num_rows($exe);
