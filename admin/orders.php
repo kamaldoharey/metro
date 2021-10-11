@@ -57,7 +57,7 @@ for ($i = 0; $i < $tot; $i++) {
 			?>
 				<tr>
 					<td>
-						<center> <input type="checkbox" name="a[]" value="<?php echo $fetch['sno']; ?>" id=""> </center>
+						<center> <input type="checkbox" name="a[]" value="<?php echo $fetch['sno']; ?>"> </center>
 					</td>
 					<td>
 						<center> <?php echo $fetch['sno'] ?> </center>

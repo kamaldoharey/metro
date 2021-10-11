@@ -56,11 +56,11 @@ if ($_POST['submit'] == "Submit") {
 					</td>
 				</tr>
 				<tr>
-					<td>Birthdate</td>
+					<td>Birthday</td>
 					<td><input required class="input-group date" required type="date" class="form-control" name="bod"></td>
 				</tr>
 				<tr>
-					<td>Addres</td>
+					<td>Address</td>
 					<td><textarea required placeholder="Address" class="form-control" name="address" cols="30" rows="10" required></textarea></td>
 				</tr>
 				<tr>
@@ -70,7 +70,7 @@ if ($_POST['submit'] == "Submit") {
 					 -->
 					<!-- <td><input required type="text" name="state"></td> -->
 					<td>
-						<select class="form-control" name="" id="">
+						<select class="form-control" name="state">
 							<option value="Andhra Pradesh"> Andhra Pradesh </option>
 							<option value="Arunachal Pradesh"> Arunachal Pradesh </option>
 							<option value="Assam"> Assam </option>
@@ -124,7 +124,7 @@ if ($_POST['submit'] == "Submit") {
 				</tr>
 				<tr>
 					<td>Enter Password</td>
-					<td><input required placeholder="Paasword" type="password" required class="form-control" name="password"></td>
+					<td><input required placeholder="Password" type="password" required class="form-control" name="password"></td>
 				</tr>
 				<tr>
 					<td colspan="2">

@@ -11,18 +11,18 @@
                 <form method="post">
                     <tr>
                         <td>Old Password</td>
-                        <td><input class="form-control" placeholder="Old Password" type="text" name="" id=""></td>
+                        <td><input class="form-control" placeholder="Old Password" type="text" name=""></td>
                     </tr>
                     <tr>
                         <td>Conform Password</td>
-                        <td><input class="form-control" placeholder="Conform Password" type="text" name="" id=""></td>
+                        <td><input class="form-control" placeholder="Conform Password" type="text" name=""></td>
                     </tr>
                     <tr>
                         <td>New Password</td>
-                        <td><input class="form-control" placeholder="New Password" type="text" name="" id=""></td>
+                        <td><input class="form-control" placeholder="New Password" type="text" name=""></td>
                     </tr>
                     <tr>
-                        <td colspan="2"><input style="text-align: center;" class="form-control btn-primary" type="submit" value="Submit" name="" id=""></td>
+                        <td colspan="2"><input style="text-align: center;" class="form-control btn-primary" type="submit" value="Submit" name=""></td>
                     </tr>
                 </form>
             </table>

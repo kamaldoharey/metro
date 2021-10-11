@@ -14,7 +14,7 @@ if ($_GET['did'] != "") {
 		</center>
 		<tr class="bg-dark">
 			<td class="text-white">
-				<center> <input class="btn-primary form-control" type="Submit" value="Delete" name="" id=""> </center>
+				<center> <input class="btn-primary form-control" type="Submit" value="Delete" name=""> </center>
 			</td>
 			<td class="text-white">
 				<center> No. </center>

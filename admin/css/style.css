@@ -7,9 +7,17 @@ body {
   display: flex !important;
   flex-direction: column !important;
   min-height: 100vh;
-  background-color: #d4b499;
+  background-color: #d4b499 !important;
 }
 
 footer {
   margin-top: auto !important;
+}
+
+a:hover {
+  color: #efeee5 !important;
+}
+
+.jumbotron {
+  background-color: #ffd8b8 !important;
 }

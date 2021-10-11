@@ -9,25 +9,23 @@
                     $sel = "select * from offer where sno='" . $_GET['did'] . "'";
                     $exe = mysql_query($sel);
                     $fetch = mysql_fetch_array($exe);
-                    // file upload code start here
-                    $name = $_FILES['co3']['name'];
-                    $tmp_name = $_FILES['co3']['tmp_name'];
-                    $path = "../images/offer/" . $name;
-                    move_uploaded_file($tmp_name, $path);
-                    // file upload code end here
+
                     if ($_POST['submit'] == "Submit") {
+                        $name = $_FILES['co3']['name'];
+                        $tmp_name = $_FILES['co3']['tmp_name'];
+                        $path = "../images/offer/" . $name;
+                        move_uploaded_file($tmp_name, $path);
                         if ($_GET['did'] == "") {
-                            $ins = "INSERT INTO offer(name, offerdec, image, status) VALUES ('" . $_POST['co1'] . "','" . $_POST['co2'] . "','" . $name . "','" . $_POST['co4'] . "')";
-                            mysql_query($ins);
+                            $insert_offer =
+                                "INSERT INTO offer(name, offerdec, image, status) VALUES ('" . $_POST['co1'] . "','" . $_POST['co2'] . "','" . $name . "','" . $_POST['co4'] . "')";
+                            mysql_query($insert_offer);
                         } else {
-                            $upd = "
-                            UPDATE offer set
-                            name='" . $_POST['co1'] . "',
-                            offerdec='" . $_POST['co2'] . "',
-                            image='" . name . "',
-                            status='" . $_POST['co4'] . "',
-                            where sno='" . $_GET['did'] . "' ";
-                            mysql_query($upd);
+                            $update_offer = "UPDATE offer SET name = '" . $_POST['co1'] . "',
+                            offerdec = '" . $_POST['co2'] . "',
+                            image = '" . $name . "',
+                            status = '" . $_POST['co4'] . "',
+                            where sno = '" . $_GET['did'] . "'";
+                            mysql_query($update_offer);
                         }
                     }
                     ?>
@@ -37,15 +35,15 @@
                         </center>
                         <tr>
                             <td>Offer Title</td>
-                            <td><input class="form-control" placeholder="Offer Title" type="text" name="co1" value="<?php echo $fetch['name'] ?>" id=""></td>
+                            <td><input class="form-control" placeholder="Offer Title" type="text" name="co1" value="<?php echo $fetch['name'] ?>"></td>
                         </tr>
                         <tr>
                             <td>Offer Description</td>
-                            <td><input class="form-control" placeholder="Offer Description" type="text" name="co2" id="" value="<?php echo $fetch['offerdec'] ?>"></td>
+                            <td><input class="form-control" placeholder="Offer Description" type="text" name="co2" value="<?php echo $fetch['offerdec'] ?>"></td>
                         </tr>
                         <tr>
                             <td>Offer Image</td>
-                            <td><input class="form-control" type="file" name="co3" id=""></td>
+                            <td><input class="form-control" type="file" name="co3"></td>
                         </tr>
                         <tr>
                             <?php if ($_GET['did'] != "") {
@@ -60,17 +58,17 @@
                                                 if ($fetch['status'] == 1) {
                                                     echo 'checked="checked"';
                                                 }
-                                                ?> type="radio" name="co4" id="">
+                                                ?> type="radio" name="co4">
                                 Disable <input <?php
                                                 if ($fetch['status'] == 0) {
                                                     echo 'checked="checked"';
                                                 }
-                                                ?> value="0" type="radio" name="co3" id="">
+                                                ?> value="0" type="radio" name="co3">
                             </td>
                         </tr>
                         <tr>
                             <td style="text-align: center;" colspan="2">
-                                <input class="btn-primary form-control" type="submit" value="Submit" name="submit" id="">
+                                <input class="btn-primary form-control" type="submit" value="Submit" name="submit">
                             </td>
                         </tr>
                     </form>

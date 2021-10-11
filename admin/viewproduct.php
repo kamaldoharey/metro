@@ -3,13 +3,13 @@
 <?php include 'fn.php'; ?>
 
 <?php
-// pegination count
+// pagination count
 $start = 0;
 $limit = 5;
 $next = $_REQUEST['page'] + 1;
 $pre = $_REQUEST['page'] - 1;
 $start = $_REQUEST['page'] * $limit;
-// End pegination count
+// End pagination count
 ?>
 
 
@@ -33,7 +33,6 @@ for ($i = 0; $i < $tot; $i++) {
 <div class="view">
 	<table class="table jumbotron">
 		<form method="post">
-
 			<center>
 				<h1>View Product</h1>
 			</center>
@@ -100,7 +99,7 @@ for ($i = 0; $i < $tot; $i++) {
 			?>
 				<tr>
 					<td>
-						<center> <input type="checkbox" name="a[]" value="<?php echo $fetch['sno']; ?>" id=""> </center>
+						<center> <input type="checkbox" name="a[]" value="<?php echo $fetch['sno']; ?>"> </center>
 					</td>
 					<td>
 						<center> <?php echo $fetch['sno']; ?> </center>

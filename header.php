@@ -91,9 +91,7 @@ session_start();
                                     </td>
                                 </tr>
                             </form>
-                        <?php } else {
-                            /* If log-in detail are not found */
-                        ?>
+                        <?php } else { ?>
                             <table>
                                 <tr> <a style="margin-top: 5px;" class="form-control btn-primary" href="profile.php">My Profile</a> </tr>
                                 <tr> <a style="margin-top: 5px;" class="form-control btn-primary" href="order.php">My Order</a> </tr>

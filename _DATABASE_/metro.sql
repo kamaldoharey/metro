@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
--- https://www.phpmyadmin.net/
+-- version 4.4.12
+-- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 28, 2019 at 05:45 AM
--- Server version: 10.1.36-MariaDB
--- PHP Version: 5.6.38
+-- Generation Time: 11 अक्तूबर, 2021 को 08:53 ?????????
+-- सर्वर संस्करण : 5.6.25
+-- PHP Version: 5.6.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -28,11 +26,11 @@ SET time_zone = "+00:00";
 -- Table structure for table `admin`
 --
 
-CREATE TABLE `admin` (
+CREATE TABLE IF NOT EXISTS `admin` (
   `sno` int(5) NOT NULL,
   `uname` text NOT NULL,
   `upass` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `admin`
@@ -47,12 +45,12 @@ INSERT INTO `admin` (`sno`, `uname`, `upass`) VALUES
 -- Table structure for table `cat`
 --
 
-CREATE TABLE `cat` (
+CREATE TABLE IF NOT EXISTS `cat` (
   `sno` int(5) NOT NULL,
   `name` text NOT NULL,
   `image` text NOT NULL,
   `status` int(2) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `cat`
@@ -67,9 +65,7 @@ INSERT INTO `cat` (`sno`, `name`, `image`, `status`) VALUES
 (6, 'Cosmatics Collection', 'Cosmatics Collection.jpg', 1),
 (7, 'Bathroom Collection', 'Bathroom Collection.jpg', 1),
 (8, 'Book', 'Book.jpg', 1),
-(9, 'asasdas', '', 1),
-(10, 'dfghsdfgs', '', 1),
-(11, 'bdfbdxgbndgb', '', 1);
+(9, '111', 'ERWFSADF.jpg', 0);
 
 -- --------------------------------------------------------
 
@@ -77,7 +73,7 @@ INSERT INTO `cat` (`sno`, `name`, `image`, `status`) VALUES
 -- Table structure for table `contact`
 --
 
-CREATE TABLE `contact` (
+CREATE TABLE IF NOT EXISTS `contact` (
   `sno` int(5) NOT NULL,
   `name` text NOT NULL,
   `address` text NOT NULL,
@@ -85,18 +81,15 @@ CREATE TABLE `contact` (
   `pno` text NOT NULL,
   `eid` text NOT NULL,
   `status` int(2) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `contact`
 --
 
 INSERT INTO `contact` (`sno`, `name`, `address`, `image`, `pno`, `eid`, `status`) VALUES
-(1, 'Metro Mall jodhpur', 'Near Gandhinagar railway station, M.I. Road, Jaipur', 'branch1.jpg', '9864435570', 'info@metromall.com', 1),
 (2, 'Metro Mall Jodhpur', 'Near Janta Sweets, Jalori Gate, Jodhpur', 'branch2.jpg', '9864435570', 'info@metromall.com', 1),
-(3, 'Metro Mall Jodhpur', 'Near Janta Sweets, Jalori Gate, Jodhpur', 'branch3.jpg', '45935874535', 'info@metromall.com', 1),
-(4, 'sdacvasd', 'sadvsadf', '', 'sdfsad', 'aeSFCSE', 1),
-(5, 'raj', 'jodhpur', '', '012548966363', 'sddssd@jsdndj.com', 1);
+(3, 'Metro Mall Jodhpur', 'Near Janta Sweets, Jalori Gate, Jodhpur', 'branch3.jpg', '45935874535', 'info@metromall.com', 1);
 
 -- --------------------------------------------------------
 
@@ -104,12 +97,12 @@ INSERT INTO `contact` (`sno`, `name`, `address`, `image`, `pno`, `eid`, `status`
 -- Table structure for table `enquiry`
 --
 
-CREATE TABLE `enquiry` (
+CREATE TABLE IF NOT EXISTS `enquiry` (
   `sno` int(10) NOT NULL,
   `name` text NOT NULL,
   `enquiry` text NOT NULL,
   `phone` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `enquiry`
@@ -130,13 +123,13 @@ INSERT INTO `enquiry` (`sno`, `name`, `enquiry`, `phone`) VALUES
 -- Table structure for table `oder`
 --
 
-CREATE TABLE `oder` (
+CREATE TABLE IF NOT EXISTS `oder` (
   `sno` int(5) NOT NULL,
   `uid` int(5) NOT NULL,
   `name` text NOT NULL,
   `price` varchar(7) NOT NULL,
   `date` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `oder`
@@ -151,13 +144,13 @@ INSERT INTO `oder` (`sno`, `uid`, `name`, `price`, `date`) VALUES
 -- Table structure for table `offer`
 --
 
-CREATE TABLE `offer` (
+CREATE TABLE IF NOT EXISTS `offer` (
   `sno` int(5) NOT NULL,
   `name` text NOT NULL,
   `offerdec` text NOT NULL,
   `image` text NOT NULL,
   `status` int(2) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `offer`
@@ -167,9 +160,10 @@ INSERT INTO `offer` (`sno`, `name`, `offerdec`, `image`, `status`) VALUES
 (1, '20% OFF on Men Shoes', 'On this festival season, 20% is off on every Men Shoes product.\r\nSo hurry up! Go on for Shopping.', 'offer 1.jpg', 1),
 (2, '25% OFF on Jwellery', 'On this festival season, 25% is off on every Jwellary Items.\r\nSo hurry up! Go on for Shopping.', 'offer 2.jpg', 1),
 (3, '50% OFF on Furnitures', 'On this festival season, 20% is off on every Furniture product.\r\nSo hurry up! Go on for Shopping.', 'offer 3.jpg', 1),
-(4, '25% OFF on Men Shirts', 'On this festival season, 20% is off on Men Shirts item.\r\nSo hurry up! Go on for Shopping.', 'offer 4.jpg', 1),
-(8, 'SDFsd', 'zdfbzd', '', 1),
-(9, 'asdas', 'asdasdas', '2018-07-07-180420_1366x768_scrot.png', 1);
+(4, '25% OFF on Men Shirts', 'On this festival season, 20% is off on Men Shirts item.\nSo hurry up! Go on for Shopping.', 'offer 4.jpg', 1),
+(5, '10% OFF on Kid Shirts', 'On this festival season, 10% is off on Kid Shirts item.\nSo hurry up! Go on for Shopping.', 'Kid Discount.png', 0),
+(6, '123', '123', 'girlhandbag.png', 0),
+(7, 'qwe', 'qwe', 'ERWFSADF.jpg', 0);
 
 -- --------------------------------------------------------
 
@@ -177,7 +171,7 @@ INSERT INTO `offer` (`sno`, `name`, `offerdec`, `image`, `status`) VALUES
 -- Table structure for table `product`
 --
 
-CREATE TABLE `product` (
+CREATE TABLE IF NOT EXISTS `product` (
   `sno` int(11) NOT NULL,
   `name` text NOT NULL,
   `cat` text NOT NULL,
@@ -193,14 +187,17 @@ CREATE TABLE `product` (
   `about` text NOT NULL,
   `status` text NOT NULL,
   `lat` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `product`
 --
 
 INSERT INTO `product` (`sno`, `name`, `cat`, `subcat`, `procode`, `fo`, `mrp`, `dismrp`, `i1`, `i2`, `i3`, `i4`, `about`, `status`, `lat`) VALUES
-(19, 'Men Black T-Shirt	', 'Fashion Collection', 'Men Shirt', 'MM021', 'Man', '400', '350', '20 (1).jpeg', '20 (1)212.jpg', 'qwwqwc3.jpeg', 'qwwqwc3.jpeg', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque nobis deserunt rem tenetur asperiores voluptatibus illo quo voluptates maxime quibusdam.', '1', '1');
+(19, 'Man Black T-Shirt', 'Fashion Collection', 'Men Shirt', 'BT-0023', 'Man', '499', '449', '1.webp', '2.webp', '3.jpg', '4.jpg', 'Black Shirt ', '1', '1'),
+(22, 'Kid T-shirt ', 'Fashion Collection', 'Kids Shirts', 'KT-501', 'Kids', '599', '549', 'ASDGTRE.webp', 'ASDFASDF.jpg', 'ASDFRGR.jpg', 'ERWFSADF.jpg', 'Kid T-Shirt ', 'on', '1'),
+(24, 'kamal kumar', 'Fashion Collection', 'Men Shirt', '', 'All', '11', '11', 'ASDGTRE.webp', 'ASDFASDF.jpg', 'ASDFRGR.jpg', 'ERWFSADF.jpg', '', '', '1'),
+(26, 'qweqweqwe', 'Fashion Collection', 'Men Shirt', '', 'All', '', '', '', '', '', '', '123', '', '0');
 
 -- --------------------------------------------------------
 
@@ -208,7 +205,7 @@ INSERT INTO `product` (`sno`, `name`, `cat`, `subcat`, `procode`, `fo`, `mrp`, `
 -- Table structure for table `regis`
 --
 
-CREATE TABLE `regis` (
+CREATE TABLE IF NOT EXISTS `regis` (
   `sno` int(5) NOT NULL,
   `name` text NOT NULL,
   `gender` text NOT NULL,
@@ -220,7 +217,7 @@ CREATE TABLE `regis` (
   `email` text NOT NULL,
   `photo` text NOT NULL,
   `password` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `regis`
@@ -236,13 +233,13 @@ INSERT INTO `regis` (`sno`, `name`, `gender`, `dob`, `address`, `state`, `check1
 -- Table structure for table `service`
 --
 
-CREATE TABLE `service` (
+CREATE TABLE IF NOT EXISTS `service` (
   `sno` int(5) NOT NULL,
   `name` text NOT NULL,
   `decp` text NOT NULL,
   `image1` text NOT NULL,
   `status` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `service`
@@ -259,13 +256,13 @@ INSERT INTO `service` (`sno`, `name`, `decp`, `image1`, `status`) VALUES
 -- Table structure for table `subcat`
 --
 
-CREATE TABLE `subcat` (
+CREATE TABLE IF NOT EXISTS `subcat` (
   `sno` int(5) NOT NULL,
   `cat` text NOT NULL,
   `name` text NOT NULL,
   `image` text NOT NULL,
   `status` int(2) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=67 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `subcat`
@@ -337,9 +334,7 @@ INSERT INTO `subcat` (`sno`, `cat`, `name`, `image`, `status`) VALUES
 (63, 'Book', 'Sports Books', 'Sports Books.jpg', 1),
 (64, 'Book', 'Reciepe Books', 'Reciepe Books.jpg', 1),
 (65, 'Book', 'Stories Books', 'Stories Books.jpg', 1),
-(66, 'Electronics Collection', 'test1', 'branch3.jpg', 1),
-(67, 'asasdas', 'awdfadsfasdf', '', 1),
-(69, 'Electronics Collection', 'zsdgsdgzsd', '', 1);
+(66, 'Electronics Collection', 'test1', 'branch3.jpg', 1);
 
 --
 -- Indexes for dumped tables
@@ -413,63 +408,52 @@ ALTER TABLE `subcat`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `sno` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
+  MODIFY `sno` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `cat`
 --
 ALTER TABLE `cat`
-  MODIFY `sno` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
-
+  MODIFY `sno` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `sno` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
+  MODIFY `sno` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `enquiry`
 --
 ALTER TABLE `enquiry`
-  MODIFY `sno` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
+  MODIFY `sno` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `oder`
 --
 ALTER TABLE `oder`
-  MODIFY `sno` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
+  MODIFY `sno` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `offer`
 --
 ALTER TABLE `offer`
-  MODIFY `sno` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
-
+  MODIFY `sno` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `sno` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
-
+  MODIFY `sno` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=27;
 --
 -- AUTO_INCREMENT for table `regis`
 --
 ALTER TABLE `regis`
-  MODIFY `sno` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
+  MODIFY `sno` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `service`
 --
 ALTER TABLE `service`
-  MODIFY `sno` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
+  MODIFY `sno` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `subcat`
 --
 ALTER TABLE `subcat`
-  MODIFY `sno` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
-COMMIT;
-
+  MODIFY `sno` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=67;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

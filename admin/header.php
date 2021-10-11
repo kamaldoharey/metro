@@ -19,23 +19,23 @@ mysql_select_db("metro");
 			<center>Metro Mall Control Panel</center>
 		</h1>
 	</div>
-	<div class="bg-dark container navbar text-white ">
-		<b><a class="nav-pills" href="home.php">Home</a></b> &nbsp &nbsp &nbsp &nbsp
-		<b><a class="nav-pills" href="addoffer.php">Add Offer</a></b> &nbsp &nbsp &nbsp &nbsp
-		<b><a class="nav-pills" href="viewoffer.php">View Offer</a></b> &nbsp &nbsp &nbsp &nbsp
-		<b><a class="nav-pills" href="addcategory.php">Add category</a></b> &nbsp &nbsp &nbsp &nbsp
-		<b><a class="nav-pills" href="viewcategory.php">View category</a></b> &nbsp &nbsp &nbsp &nbsp
-		<b><a class="nav-pills" href="addsub.php">Add Sub category</a></b> &nbsp &nbsp &nbsp &nbsp
-		<b><a class="nav-pills" href="viewsub.php">View Sub category</a></b> &nbsp &nbsp &nbsp &nbsp
-		<b><a class="nav-pills" href="addproduct.php">Add Product</a></b> &nbsp &nbsp &nbsp &nbsp
-		<b><a class="nav-pills" href="viewproduct.php">View Product</a></b> &nbsp &nbsp &nbsp &nbsp
-		<b><a class="nav-pills" href="addservices.php">Add Service</a></b> &nbsp &nbsp &nbsp &nbsp
-		<b><a class="nav-pills" href="viewservices.php">View Services</a></b> &nbsp &nbsp &nbsp &nbsp
-		<b><a class="nav-pills" href="addcontact.php">Add Contact</a></b> &nbsp &nbsp &nbsp &nbsp
-		<b><a class="nav-pills" href="viewcontact.php">View Contact</a></b> &nbsp &nbsp &nbsp &nbsp
-		<b><a class="nav-pills" href="users.php">Users</a></b> &nbsp &nbsp &nbsp &nbsp
-		<b><a class="nav-pills" href="orders.php">Orders</a></b> &nbsp &nbsp &nbsp &nbsp
-		<b><a class="nav-pills" href="enquiry.php">Enquiry</a></b> &nbsp &nbsp &nbsp &nbsp
-		<b><a class="nav-pills" href="changepassword.php">Changepassword</a></b> &nbsp &nbsp &nbsp &nbsp
-		<b><a class="nav-pills" href="logout.php">Logout</a></b> &nbsp &nbsp &nbsp &nbsp
-	</div>
+	<ul class="bg-dark container navbar text-white list-unstyled">
+		<li><a class=" nav nav-pills" href="home.php">Home</a></li>
+		<li><a class=" nav nav-pills" href="addoffer.php">Add Offer</a></li>
+		<li><a class=" nav nav-pills" href="viewoffer.php">View Offer</a></li>
+		<li><a class=" nav nav-pills" href="addcategory.php">Add category</a></li>
+		<li><a class=" nav nav-pills" href="viewcategory.php">View category</a></li>
+		<li><a class=" nav nav-pills" href="addsub.php">Add Sub category</a></li>
+		<li><a class=" nav nav-pills" href="viewsub.php">View Sub category</a></li>
+		<li><a class=" nav nav-pills" href="addproduct.php">Add Product</a></li>
+		<li><a class=" nav nav-pills" href="viewproduct.php">View Product</a></li>
+		<li><a class=" nav nav-pills" href="addservices.php">Add Service</a></li>
+		<li><a class=" nav nav-pills" href="viewservices.php">View Services</a></li>
+		<li><a class=" nav nav-pills" href="addcontact.php">Add Contact</a></li>
+		<li><a class=" nav nav-pills" href="viewcontact.php">View Contact</a></li>
+		<li><a class=" nav nav-pills" href="users.php">Users</a></li>
+		<li><a class=" nav nav-pills" href="orders.php">Orders</a></li>
+		<li><a class=" nav nav-pills" href="enquiry.php">Enquiry</a></li>
+		<li><a class=" nav nav-pills" href="changepassword.php">Changepassword</a></li>
+		<li><a class=" nav nav-pills" href="logout.php">Logout</a></li>
+	</ul>

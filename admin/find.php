@@ -1,8 +1,7 @@
-<?php 
-$src="";
-if ($_POST['Find']!="")
-{
-	$src=" where name=".$_POST['st1'] ;
+<?php
+$src = "";
+if ($_POST['Find'] != "") {
+	$src = " where name=" . $_POST['st1'];
 }
 ?>
 <center>
@@ -10,7 +9,7 @@ if ($_POST['Find']!="")
 		<form method="post">
 			<tr>
 				<td><input class="form-control" type="text" name="st1" placeholder="Search"></td>
-				<td><input class="form-control btn-primary" type="submit" name="Find" value="Find" id=""></td>
+				<td><input class="form-control btn-primary" type="submit" name="Find" value="Find"></td>
 			</tr>
 		</form>
 	</table>

@@ -46,14 +46,14 @@ if ($_POST['login'] == "Submit") {
 					<form method="post">
 						<tr>
 							<td>User Name</td>
-							<td><input class="form-control" placeholder="User Name" type="text" name="UN" id=""></td>
+							<td><input class="form-control" placeholder="User Name" type="text" name="UN"></td>
 						</tr>
 						<tr>
 							<td>Password</td>
-							<td><input class="form-control" placeholder="Password" type="password" name="PW" id=""></td>
+							<td><input class="form-control" placeholder="Password" type="password" name="PW"></td>
 						</tr>
 						<tr>
-							<td style="text-align: right;"> <input type="checkbox" name="" id=""> </td>
+							<td style="text-align: right;"> <input type="checkbox" name=""> </td>
 							<td> Remember Me </td>
 						</tr>
 						<tr>

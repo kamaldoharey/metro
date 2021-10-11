@@ -11,11 +11,11 @@ function divchang(x) {
 }
 
 function hidediv(kol) {
-	
+
 	document.getElementById("evof" + kol).style.backgroundColor = "white";
 }
 
-function uuu1(){
+function uuu1() {
 	document.getElementById("uuu2").style.display = "block";
 	document.getElementById("uuu3").style.display = "none";
 }

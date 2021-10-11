@@ -1,10 +1,9 @@
 <?php include 'header.php'; ?>
 <?php include 'sess.php'; ?>
-
-<div class="row container-fluid">
 <center>
     <h1>HOME</h1>
 </center>
+<div class="row container-fluid">
     <div class="col-md-3"></div>
     <div class="col-md-6">
         <div class="jumbotron">

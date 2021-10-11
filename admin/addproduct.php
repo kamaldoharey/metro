@@ -5,29 +5,31 @@
 // BUG Update product is not working
 
 //file upload
-$name1 = $_FILES['im1']['name'];
-$tmp_name = $_FILES['im1']['tmp_name'];
-$path = "../images/product/" . $name1;
-move_uploaded_file($tmp_name, $path);
 
-$name2 = $_FILES['im2']['name'];
-$tmp_name = $_FILES['im2']['tmp_name'];
-$path = "../images/product/" . $name2;
-move_uploaded_file($tmp_name, $path);
-
-$name3 = $_FILES['im3']['name'];
-$tmp_name = $_FILES['im3']['tmp_name'];
-$path = "../images/product/" . $name3;
-move_uploaded_file($tmp_name, $path);
-
-$name4 = $_FILES['im4']['name'];
-$tmp_name = $_FILES['im4']['tmp_name'];
-$path = "../images/product/" . $name4;
-move_uploaded_file($tmp_name, $path);
 ?>
+
 <?php
 if ($_POST['submit'] == "Submit") {
     if ($_GET['did'] == "") {
+        $name1 = $_FILES['im1']['name'];
+        $tmp_name = $_FILES['im1']['tmp_name'];
+        $path = "../images/product/" . $name1;
+        move_uploaded_file($tmp_name, $path);
+
+        $name2 = $_FILES['im2']['name'];
+        $tmp_name = $_FILES['im2']['tmp_name'];
+        $path = "../images/product/" . $name2;
+        move_uploaded_file($tmp_name, $path);
+
+        $name3 = $_FILES['im3']['name'];
+        $tmp_name = $_FILES['im3']['tmp_name'];
+        $path = "../images/product/" . $name3;
+        move_uploaded_file($tmp_name, $path);
+
+        $name4 = $_FILES['im4']['name'];
+        $tmp_name = $_FILES['im4']['tmp_name'];
+        $path = "../images/product/" . $name4;
+        move_uploaded_file($tmp_name, $path);
         $ins = "INSERT INTO product(name, cat, subcat, procode, fo, mrp, dismrp, i1, i2, i3, i4, about, status, lat) VALUES (
                 '" . $_POST['name'] . "',
                 '" . $_POST['cat'] . "',
@@ -46,6 +48,25 @@ if ($_POST['submit'] == "Submit") {
                 ";
         mysql_query($ins);
     } else {
+        $name1 = $_FILES['im1']['name'];
+        $tmp_name = $_FILES['im1']['tmp_name'];
+        $path = "../images/product/" . $name1;
+        move_uploaded_file($tmp_name, $path);
+
+        $name2 = $_FILES['im2']['name'];
+        $tmp_name = $_FILES['im2']['tmp_name'];
+        $path = "../images/product/" . $name2;
+        move_uploaded_file($tmp_name, $path);
+
+        $name3 = $_FILES['im3']['name'];
+        $tmp_name = $_FILES['im3']['tmp_name'];
+        $path = "../images/product/" . $name3;
+        move_uploaded_file($tmp_name, $path);
+
+        $name4 = $_FILES['im4']['name'];
+        $tmp_name = $_FILES['im4']['tmp_name'];
+        $path = "../images/product/" . $name4;
+        move_uploaded_file($tmp_name, $path);
         $upd = "
                 UPDATE product SET 
                 name='" . $_POST['name'] . "',
@@ -172,6 +193,7 @@ if ($_POST['submit'] == "Submit") {
                                 <img class="img-thumbnail" src="../images/product/<?php echo $fetch_product['i1'] ?>" src="" alt="">
                             <?php } ?>
                             <input class="form-control" type="file" name="im1">
+                            <input type="hidden" name="update_image_1" value="../images/product/<?php echo $fetch_product['i1'] ?>">
                         </td>
                     </tr>
                     <tr>
@@ -181,7 +203,9 @@ if ($_POST['submit'] == "Submit") {
                                 ?>
                                 <img class=" img-thumbnail" src="../images/product/<?php echo $fetch_product['i2'] ?>" src="" alt="">
                             <?php } ?>
-                            <input class="form-control" type="file" name="im2">
+                            <input class="form-control" type="file" name="im2" value="../images/product/<?php echo $fetch_product['i2'] ?>">
+                            <input type="hidden" name="update_image_2" value="../images/product/<?php echo $fetch_product['i2'] ?>">
+
                         </td>
                     </tr>
                     <tr>
@@ -191,7 +215,8 @@ if ($_POST['submit'] == "Submit") {
                             ?>
                                 <img class=" img-thumbnail" src="../images/product/<?php echo $fetch_product['i3'] ?>" src="" alt="">
                             <?php } ?>
-                            <input class="form-control" type="file" name="im3">
+                            <input class="form-control" type="file" name="im3" value="../images/product/<?php echo $fetch_product['i3'] ?>">
+                            <input type="hidden" name="update_image_3" value="../images/product/<?php echo $fetch_product['i3'] ?>">
                         </td>
                     </tr>
                     <tr>
@@ -202,7 +227,8 @@ if ($_POST['submit'] == "Submit") {
                             ?>
                                 <img class=" img-thumbnail" src="../images/product/<?php echo $fetch_product['i4'] ?>" src="" alt="">
                             <?php } ?>
-                            <input class="form-control" type="file" name="im4">
+                            <input class="form-control" type="file" name="im4" value="../images/product/<?php echo $fetch_product['i4'] ?>">
+                            <input type="hidden" name="update_image_4" value="../images/product/<?php echo $fetch_product['i4'] ?>">
                         </td>
                     </tr>
                     <tr>

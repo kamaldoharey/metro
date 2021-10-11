@@ -29,7 +29,7 @@ for ($i = 0; $i < $tot; $i++) {
 				<h1>View Product</h1>
 			</center>
 			<tr class="bg-dark">
-				<td class="text-white"><input class="btn-primary form-control" type="Submit" value="Delete" name="" id=""></td>
+				<td class="text-white"><input class="btn-primary form-control" type="Submit" value="Delete" name=""></td>
 				<td class="text-white">
 					<center>Subcat ID</center>
 				</td>
@@ -61,7 +61,7 @@ for ($i = 0; $i < $tot; $i++) {
 			?>
 				<tr>
 					<td>
-						<center><input type="checkbox" name="a[]" value="<?php echo $fetch['sno']; ?>" id=""></center>
+						<center><input type="checkbox" name="a[]" value="<?php echo $fetch['sno']; ?>"></center>
 					</td>
 					<td>
 						<center><?php echo $fetch['sno']; ?></center>
