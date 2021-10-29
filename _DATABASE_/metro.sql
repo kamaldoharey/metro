@@ -3,8 +3,8 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 11 अक्तूबर, 2021 को 08:53 ?????????
--- सर्वर संस्करण : 5.6.25
+-- Generation Time: Oct 29, 2021 at 08:43 PM
+-- Server version: 5.6.25
 -- PHP Version: 5.6.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -88,8 +88,8 @@ CREATE TABLE IF NOT EXISTS `contact` (
 --
 
 INSERT INTO `contact` (`sno`, `name`, `address`, `image`, `pno`, `eid`, `status`) VALUES
-(2, 'Metro Mall Jodhpur', 'Near Janta Sweets, Jalori Gate, Jodhpur', 'branch2.jpg', '9864435570', 'info@metromall.com', 1),
-(3, 'Metro Mall Jodhpur', 'Near Janta Sweets, Jalori Gate, Jodhpur', 'branch3.jpg', '45935874535', 'info@metromall.com', 1);
+(2, 'Kalpana Mart, Alwar', 'Railway station Road, Alwar', 'branch2.jpg', '9772018601', 'info@kapanamart.com', 1),
+(3, 'Kalpana Mart, Alwar', 'Railway station Road, Alwar', 'branch3.jpg', '8005537308', 'info@kalpanamart.com', 1);
 
 -- --------------------------------------------------------
 
@@ -195,9 +195,9 @@ CREATE TABLE IF NOT EXISTS `product` (
 
 INSERT INTO `product` (`sno`, `name`, `cat`, `subcat`, `procode`, `fo`, `mrp`, `dismrp`, `i1`, `i2`, `i3`, `i4`, `about`, `status`, `lat`) VALUES
 (19, 'Man Black T-Shirt', 'Fashion Collection', 'Men Shirt', 'BT-0023', 'Man', '499', '449', '1.webp', '2.webp', '3.jpg', '4.jpg', 'Black Shirt ', '1', '1'),
-(22, 'Kid T-shirt ', 'Fashion Collection', 'Kids Shirts', 'KT-501', 'Kids', '599', '549', 'ASDGTRE.webp', 'ASDFASDF.jpg', 'ASDFRGR.jpg', 'ERWFSADF.jpg', 'Kid T-Shirt ', 'on', '1'),
-(24, 'kamal kumar', 'Fashion Collection', 'Men Shirt', '', 'All', '11', '11', 'ASDGTRE.webp', 'ASDFASDF.jpg', 'ASDFRGR.jpg', 'ERWFSADF.jpg', '', '', '1'),
-(26, 'qweqweqwe', 'Fashion Collection', 'Men Shirt', '', 'All', '', '', '', '', '', '', '123', '', '0');
+(22, 'Man T-Shirt', 'Fashion Collection', 'Men Shirt', 'KT-501', 'Kids', '599', '549', 'P45511.webp', 'P45512.webp', 'P45513.webp', 'P45514.webp', 'Kid T-Shirt ', '1', '1'),
+(24, 'Woman T-Shirt', 'Fashion Collection', 'Men Shirt', 'RI-457', 'All', '899', '749', 'ASDGTRE.webp', 'ASDFASDF.jpg', 'ASDFRGR.jpg', 'ERWFSADF.jpg', 'Woman fashion black T shirt', '1', '1'),
+(26, 'Kid Wear', 'Fashion Collection', 'Men Shirt', 'TL-897', 'All', '1199', '999', 'T7851.jpg', 'T7852.webp', 'T7853.jpg', 'T7854.webp', 'T shirt for man', '1', '1');
 
 -- --------------------------------------------------------
 
@@ -224,8 +224,8 @@ CREATE TABLE IF NOT EXISTS `regis` (
 --
 
 INSERT INTO `regis` (`sno`, `name`, `gender`, `dob`, `address`, `state`, `check1`, `phone`, `email`, `photo`, `password`) VALUES
-(9, 'kamal', 'male', '2018-03-09', 'asjbcjsdbjkbc', 'sadas', '12', '9874563210', 'abc@qaz.com', 'avatar.png', 'kamal'),
-(10, 'ankit', '', '2018-03-08', 'sdasd', 'asdas', '12', '6516541', 'klcdsnlk@kcdsnjka.cds', 'avatar.png', 'ankit');
+(9, 'kamal', 'male', '1996-01-26', 'Dangiyawas Bypass, Sector 8, Kudi Bhagtasni Housing Board, Vivek Vihar Yojana,', 'Rajasthan', '12', '9874563210', 'abc@qaz.com', 'avatar.png', 'kamal'),
+(10, 'ankit', 'male', '1996-08-21', '14/H/08, Indira Gandhi Nagar, Jagatpura, Jaipur', 'Rajasthan', '12', '6516541', 'klcdsnlk@kcdsnjka.cds', 'avatar.png', 'ankit');
 
 -- --------------------------------------------------------
 

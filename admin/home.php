@@ -14,7 +14,7 @@
                 <h4 class="text-primary">Welcome to</h4>
             </center>
             <center>
-                <h3 class="text-warning">Metro Mall Control Panel</h3>
+                <h3 class="text-warning">Kalpana Mart Control Panel</h3>
             </center>
         </div>
     </div>

@@ -23,7 +23,7 @@ if ($_POST['login'] == "Submit") {
 
 <head>
 	<meta charset="UTF-8">
-	<title>Metro Mall</title>
+	<title>Kalpana Mart</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/style.css">
 </head>
@@ -31,7 +31,7 @@ if ($_POST['login'] == "Submit") {
 <body>
 	<div class="container-fluid bg-dark text-white">
 		<h1>
-			<center>Metro Mall Control Panel</center>
+			<center>Kalpana Mart Control Panel</center>
 		</h1>
 	</div>
 	<center>

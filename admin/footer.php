@@ -1,6 +1,6 @@
 <footer class="bg-dark">
     <div class="text-white">
-        <div class="display-4 d-flex justify-content-center">www.sitename.com</div>
+        <div class="display-4 d-flex justify-content-center">Kalpana Mart</div>
     </div>
 </footer>
 </body>

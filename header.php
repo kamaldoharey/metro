@@ -12,7 +12,7 @@ session_start();
 
 <head>
     <meta charset="UTF-8">
-    <title>Metro Mall</title>
+    <title>Kalpana Mart</title>
     <!-- /* -------------------------------- bootstrap ------------------------------- */ -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- /* ------------------------------- fontawesome ------------------------------ */ -->
@@ -29,7 +29,7 @@ session_start();
         <div class="container custom-bg-1">
             <ul class="row">
                 <li class="col-md-3 list-unstyled">
-                    <h1>Metro Mall</h1>
+                    <h1>Kalpana Mart</h1>
                     <td colspan="2">
                 </li>
                 <!-- /* ----------------------------- navigation bar ----------------------------- */ -->
@@ -103,16 +103,21 @@ session_start();
                 </div>
                 <!-- /* ------------------------ latest-product-div-items ------------------------ */ -->
                 <div id="latest-product">
-                    <?php
-                    // TODO : LATEST PRODUCTS ARE NOT SHOWING
-                    ?>
                     <h3 class="custom-bg-1 text-white">Latest Products</h3>
                     <div class="latest-product-div-items">
+                        <!-- logic start here -->
                         <?php
-                        $select_latest_products = "select * from product ORDER BY DESC";
-                        $execute_query = mysql_query($select_latest_products);
-
+                        $select_latest_product = "select * from product ORDER BY sno DESC limit 0,4";
+                        $execute_latest_product = mysql_query($select_latest_product);
+                        while ($fetch = mysql_fetch_array($execute_latest_product)) {
                         ?>
+
+                            <img class="img-fluid" src="images/product/<?php echo $fetch['i1']; ?>" width="auto" height="50px" alt="">
+                        <?php } ?>
+
+
+
+                        <!-- logic ends start here -->
                     </div>
                 </div>
                 <!-- /* ------------------------ latest product ends here ------------------------ */ -->

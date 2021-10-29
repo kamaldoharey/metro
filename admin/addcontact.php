@@ -41,8 +41,8 @@ if ($_POST['submit'] == "Submit") {
 			<table class="table">
 				<form method="post" enctype="multipart/form-data">
 					<tr>
-						<td>Metro mall Branch </td>
-						<td><input class="form-control" placeholder="Metro mall Branch" type="text" name="loc"></td>
+						<td>Kalpana Mart Branch </td>
+						<td><input class="form-control" placeholder="Kalpana Mart Branch" type="text" name="loc"></td>
 					</tr>
 					<tr>
 						<td>Branch Address</td>
