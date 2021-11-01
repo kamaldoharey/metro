@@ -3,7 +3,7 @@ error_reporting(0);
 session_start();
 
 mysql_connect("localhost", "root", "");
-mysql_select_db("metro");
+mysql_select_db("kalpana");
 
 if ($_POST['login'] == "Submit") {
 	$sel = "select * from admin where uname='" . $_POST['UN'] . "' and upass='" . $_POST['PW'] . "' ";

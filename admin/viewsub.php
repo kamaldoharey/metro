@@ -54,7 +54,7 @@ for ($i = 0; $i < $tot; $i++) {
 			</tr>
 			<?php
 			mysql_connect("localhost", "root", "");
-			mysql_select_db("metro");
+			mysql_select_db("kalpana");
 			$sel = "Select * from subcat $src limit $start,$limit ";
 			$q = mysql_query($sel);
 			while ($fetch = mysql_fetch_array($q)) {

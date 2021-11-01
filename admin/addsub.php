@@ -38,7 +38,7 @@ $fetch_sub_cat = mysql_fetch_array($exe_sub_cat);
                             <select class="form-control" name="obj">
                                 mysql_connect("localhost","root","");
                                 <?php
-                                mysql_select_db("metro");
+                                mysql_select_db("kalpana");
                                 $sel = "Select * from cat";
                                 $q = mysql_query($sel);
                                 while ($fetch = mysql_fetch_array($q)) {

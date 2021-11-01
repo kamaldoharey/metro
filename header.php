@@ -4,7 +4,7 @@ error_reporting(0);
 // error_reporting
 
 mysql_connect("localhost", "root", "");
-mysql_select_db("metro");
+mysql_select_db("kalpana");
 session_start();
 ?>
 <!DOCTYPE html>
